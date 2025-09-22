@@ -19,7 +19,7 @@ func main() {
 
 	port := cfg.App.Port // Mengambil nilai port dari konfigurasi aplikasi
 	router := gin.Default()
-	routes.SetupRoutes(router, userHandler)
+	routes.SetupRoutes(router, *userHandler)
 	router.Run(":" + port) // Menjalankan server pada port yang ditentukan
 
 	log.Logger.Printf("Server berjalan pada port %s", port)

@@ -1,10 +1,12 @@
 package routes
 
 import (
+	"userfc/cmd/user/handler"
+
 	"github.com/gin-gonic/gin"
 )
 
-func SetupRoutes(router *gin.Engine) {
+func SetupRoutes(router *gin.Engine, userHandler handler.UserHandler) {
 	// Public Api
-	router.Get("/ping", userHandler.Ping)
+	router.GET("/ping", userHandler.Ping)
 }
